@@ -185,3 +185,60 @@
 //         console.log("not now")
 //         break;                         
 // }
+// Логические операторы
+
+// const hamburger = 5;
+// const fries = 0;
+
+// if (hamburger && fries) {
+// 	console.log("я сыт");
+// }
+
+// console.log(hamburger && fries);
+
+
+// const hamburger = 3;
+// const fries = 1;
+// const cola = 0;
+
+// console.log((hamburger === 3 && cola && fries === 1));
+
+// console.log(1 && 0);
+// console.log(1 && 5);
+// console.log(null &&  5);
+// console.log(0 && "sadsadaf");
+
+// if (hamburger === 3 && cola ===1 && fries === 1) {
+// 	console.log("все сыты");
+// } else {
+//     console.log("мы уходим");
+// }
+
+
+// const hamburger = 0;
+// const fries = 0;
+// const cola = 0;
+
+
+// if (hamburger || cola || fries) {
+// 	console.log("все довольны");
+// } else {
+//     console.log("мы уходим");
+// }
+
+// console.log(hamburger || cola || fries);
+
+// let johnReport, alexReport, samReport, mariaReport = "done";
+
+// console.log(johnReport  || alexReport || samReport || mariaReport);
+
+// const hamburger = 3;
+// const fries = 3;
+// const cola = 0;
+// const nuggets = 2;
+
+// if (hamburger === 3 && cola === 2 || fries === 3 && nuggets === 1) {
+// 	console.log("все довольны");
+// } else {
+//     console.log("мы уходим");
+// }
