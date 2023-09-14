@@ -148,3 +148,40 @@
 // 	isClose = false;
       
 // console.log(isCheked || !isClose);
+
+// Условия 
+
+// if (4 == 9){
+// 	console.log("OK!");
+// } else {
+// 	console.log("Erorr!");
+// }
+
+// const num = 50;
+
+// if (num < 49){
+// 	console.log("Erorr");
+// } else if (num > 100){
+// 	console.log("Много");
+// } else {
+// 	console.log("Ok");
+// }
+
+// (num === 50) ? console.log("Ok"): console.log("Erorr");
+
+// const num = 5;
+
+// switch(num){
+//     case 49:
+//         console.log("erorr");
+//         break;  
+//     case 100:
+//         console.log("erorr");
+//         break;
+//     case 50:
+//         console.log("Ok");
+//         break;
+//     default:
+//         console.log("not now")
+//         break;                         
+// }
