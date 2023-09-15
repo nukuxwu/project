@@ -309,3 +309,55 @@
 // 		}
 // 	}  
 // }
+
+// Упражнения по циклам
+
+// let num = 5;
+
+// while (num < 11){
+// 	console.log(num);
+// 	num++;
+// }
+
+// for (let i = 20; i >= 10; i--){
+// 	if (i === 13) 
+// 		break;
+// 	console.log(i);
+    
+// }
+
+// for (let j = 2; j <= 10; j++ ){
+// 	if (j % 2 === 0){
+// 		console.log(j);
+// 	}
+// }
+
+// for (let i = 2; i <= 16; i++) {
+//     if (i % 2 === 0) {
+//         continue;
+//     } else {
+//         console.log(i);
+//     }
+// }
+
+// let num = 2;
+
+// while (num <= 16){
+//     if (num % 2 === 0) {
+//         num++;
+//         continue;
+//     } else {
+//         console.log(num);
+//     }
+//     num++;
+// }
+
+
+
+//     const arrayOfNumbers = [];
+
+//     for ( let i = 5; i <= 10; i++){
+//         arrayOfNumbers[i - 5] = i
+//     }
+
+//     console.log(arrayOfNumbers);
