@@ -470,3 +470,38 @@
 // test();
 // function doNothing() {}
 // console.log(doNothing() === undefined);
+
+// Методы и свойства строк и чисел
+
+// const arr = [1,2,3,4];
+
+// console.log(arr.length);
+
+// const str = "tESt";
+
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+
+// const fruit = "Some fruit";
+
+// console.log(fruit.indexOf("q"));
+
+// const logg = "Hello world";
+
+// console.log(logg.slice(6,11));(вырезает от указанного до указанного элемента)
+
+// console.log(logg.slice(6));(вырезает с указанного элемента)
+
+// console.log(logg.substring(6,11));(не использует отрицательные значения)
+
+// console.log(logg.substr(6,5));(сколько символов необходимо вырезать)
+
+// const num = 12.2;
+
+// console.log(Math.round(num));(округление числа)
+
+// const test = "12.2px";
+
+// console.log(parseInt(test));(переводит число в другую систему исчисления)
+// console.log(parseFloat(test));(переводит число либо строку в десятичное значение)
+
