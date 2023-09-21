@@ -49,17 +49,19 @@
 // }
 // while (numderOfFilms === "" || !numderOfFilms || isNaN(numderOfFilms));
 
-// for (let i = 0; i < 2; i++){
-// 	const a = prompt("Один из последних просмотренных фильмов?",""),
-// 		b = prompt("На сколько оцените его?","");   
-// 	if (a != null && b != null && a != "" && b != "" && a.length < 50) {
-// 		personalMovieDB.movies[a] = b;
-// 		console.log("done");
-// 	} else {
-// 		console.log("error");
-// 		i--;
+
+// let yourGenres = "";
+// let i = 1;
+
+// do{
+// 	yourGenres = prompt(`Ваш любимый жанр под номером ${i}`);
+// 	if (!yourGenres){
+// 		continue;
 // 	}
+// 	personalMovieDB.genres.push(yourGenres);
+// 	i++;
 // }
+// while(i <= 3);	
 
 
 /* Задание на урок 3:
@@ -99,18 +101,17 @@ const personalMovieDB = {
 
 
 function writeYourGenres(){
-	let yourGenres = "";
-	let i = 1;
-
-	do{
-		yourGenres = prompt(`Ваш любимый жанр под номером ${i}`);
-		if (!yourGenres){
-			continue;
+	for (let i = 0; i < 2; i++){
+		const a = prompt("Один из последних просмотренных фильмов?","").trim(),
+			b = prompt("На сколько оцените его?","").trim();   
+		if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+			personalMovieDB.movies[a] = b;
+			console.log("done");
+		} else {
+			console.log("error");
+			i--;
 		}
-		personalMovieDB.genres.push(yourGenres);
-		i++;
 	}
-	while(i <= 3);	
 }
 
 writeYourGenres();
