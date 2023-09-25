@@ -153,3 +153,110 @@ const n = 5;
 const fibNumbers = fib(n);
 
 console.log(fibNumbers);
+
+
+const personalPlanPeter = {
+	name: "Peter",
+	age: "29",
+	skills: {
+		languages: ["ru", "eng", "de", "fr"],
+		programmingLangs: {
+			js: "20%",
+			php: "10%",
+			java: "50%"
+		},
+		exp: "1 month"
+	},
+	showAgeAndLangs: function(plan){
+		const {age} = plan;
+		const {languages} = plan.skills;
+		let str = `Мне ${age} и я владею языками: $`;
+
+		languages.forEach(function(lang){
+			str += `${lang.toUpperCase()} `;
+		});
+		return str;
+	}
+};
+
+personalPlanPeter.showAgeAndLangs(personalPlanPeter);
+
+function showExperience(plan){
+	const {exp} = plan.skills;
+	return exp;
+}	
+
+showExperience(personalPlanPeter);
+
+function showProgrammingLangs(plan){
+	let str = "";
+	const {programmingLangs} = plan.skills;
+	for ( let key in programmingLangs){
+		str += `Язык ${key} изучен на ${programmingLangs[key]}\n`; 
+	}
+
+	return str;
+
+}
+
+console.log(showProgrammingLangs(personalPlanPeter));
+
+const family = ["Peter", "Ann", "Alex", "Linda"];
+
+function showFamily(arr) {
+
+	if(arr.length == 0){
+		return "Семья пуста";
+	}
+
+	let str = "Семья состоит из: ";
+
+	for (let i = 0; i < arr.length; i++){
+		str += `${arr[i]} `;
+	}
+
+	return str;
+}
+
+console.log(showFamily(family));
+
+const favoriteCities = ["liSBon", "ROME", "miLan", "Dublin"];
+
+function standardizeStrings(arr) {
+	return arr.forEach(value =>{
+		console.log(value.toLowerCase());
+	});
+}
+
+standardizeStrings(favoriteCities);	
+
+const someString = "This is some strange string";
+
+function reverse(str) {
+	let new_str = str.split("").reverse().join("");
+	console.log(new_str);
+}
+
+reverse(someString);
+
+const baseCurrencies = ["USD", "EUR"];
+const additionalCurrencies = ["UAH", "CNY"];
+
+function availableCurr(arr, missingCurr) {
+	let str = "Доступные валюты: \n";
+	
+	if(arr.length === 0){
+		return "Нет доступных валют";
+	}
+
+	for(let i = 0; i < arr.length; i++){
+		if (arr[i] == missingCurr){
+			continue;
+		}
+		str += `${arr[i]}\n`;
+	}
+	return str;
+}
+
+console.log(availableCurr(baseCurrencies.concat(additionalCurrencies), "CNY"));
+// availableCurr([...baseCurrencies, ...additionalCurrencies], "CNY");
