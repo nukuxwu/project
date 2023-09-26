@@ -149,7 +149,7 @@ function fib(n){
 	return fibonacciSequence.join(" ");
 } 
 
-const n = 5;
+const n = 7;
 const fibNumbers = fib(n);
 
 console.log(fibNumbers);
@@ -170,7 +170,7 @@ const personalPlanPeter = {
 	showAgeAndLangs: function(plan){
 		const {age} = plan;
 		const {languages} = plan.skills;
-		let str = `Мне ${age} и я владею языками: $`;
+		let str = `Мне ${age} и я владею языками: `;
 
 		languages.forEach(function(lang){
 			str += `${lang.toUpperCase()} `;
@@ -260,3 +260,91 @@ function availableCurr(arr, missingCurr) {
 
 console.log(availableCurr(baseCurrencies.concat(additionalCurrencies), "CNY"));
 // availableCurr([...baseCurrencies, ...additionalCurrencies], "CNY");
+
+const shoppingMallData = {
+	shops: [
+		{
+			width: 10,
+			length: 5
+		},
+		{
+			width: 15,
+			length: 7
+		},
+		{
+			width: 20,
+			length: 5
+		},
+		{
+			width: 8,
+			length: 10
+		}
+	],
+	height: 5,
+	moneyPer1m3: 30,
+	budget: 40000,
+	isBudgetEnough: function isBudgetEnough(){
+		// this.shops.forEach( value => {
+		// 	const area = value.width * value.length;
+		// 	console.log(area);
+		// });
+
+		// let sum = 0;
+
+		// this.shops.forEach( value => {
+		// 	sum += value.length * value.width;
+		// });
+		// console.log(sum);
+
+		// let totalVolume = 0;
+
+		// this.shops.forEach( value => {
+		// 	const area = value.length * value.width;
+		// 	const shopVolume = area * this.height;
+		// 	totalVolume += shopVolume;
+		// });
+
+		
+		let actualBudget = 0;
+
+		this.shops.forEach( value => {
+			const area = value.length * value.width;
+			const shopVolume = area * this.height;
+			const shopsBudget = shopVolume * this.moneyPer1m3;
+			actualBudget += shopsBudget;
+		});
+
+		if (actualBudget <= this.budget){
+			console.log("Бюджета достаточно");
+		} else {
+			console.log("Бюджета недостаточно");
+		}
+
+	}
+};
+
+shoppingMallData.isBudgetEnough();
+
+const students = ["Peter", "Andrew", "Ann", "Mark", "Josh", "Sandra", "Cris", "Bernard", "Takesi", "Sam" ];
+
+function sortStudentsByGroups(arr) {
+	arr.sort();
+	const a = [], b = [], c = [], rest = []; 	
+
+	for (let i = 0; i < arr.length; i++){
+		if(i < 3){
+			a.push(arr[i]);
+		} else if (i < 6){
+			b.push(arr[i]);
+		} else if (i < 9){
+			c.push(arr[i]);
+		} else {
+			rest.push(arr[i]);
+		}
+	} 
+
+	return [a, b, c, `Оставшиевся студенты: ${rest.length === 0 ? "-" : rest.join(", ")}`];
+
+}
+	
+console.log(sortStudentsByGroups(students));
