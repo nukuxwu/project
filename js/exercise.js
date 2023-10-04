@@ -403,3 +403,30 @@ function transferWaitors(data) {
 
 console.log(transferWaitors(restorantData));
 console.log(restorantData);
+
+
+function factorial(n) {
+	if (typeof(n) !== "number" || !Number.isInteger(n)) {
+		return "Ошибка, проверьте данные";
+	}
+	
+	// if (n >= 1) {
+	// 	return n * factorial(n - 1);
+	// } else {
+	// 	return 1;
+	// }
+
+	if (n === 1) {
+		return n;
+	} else {
+		let result = 1;
+
+		for (let i = 0; i < n; i++ ){
+			result *= n - i;
+		}
+
+		return result;
+	}
+}
+
+console.log(factorial(5));
